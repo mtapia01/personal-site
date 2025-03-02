@@ -1,22 +1,20 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import TypingEffect from "@/components/TypingEffect.vue";
 </script>
 
 <template>
   <header>
-<!--    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />-->
-
     <div class="wrapper">
       <HelloWorld msg="Hi! I am Michael." />
-
+<!--      <TypingEffect></TypingEffect>-->
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-
-
     </div>
+    <v-divider :thickness="5" vertical></v-divider>
   </header>
 
 <!--  <RouterView />-->
