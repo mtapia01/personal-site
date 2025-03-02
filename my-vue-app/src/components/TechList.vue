@@ -17,7 +17,7 @@ const tools = [
 <template>
   <div class="slider">
     <h2>
-      Here are some of the tools I use:
+      Here are some of the tools I use
     </h2>
     <div class="slide-track">
       <div v-for="(tool, index) in tools" :key="index" class="slide">
@@ -42,13 +42,13 @@ const tools = [
 
 .slide-track {
   display: flex;
-  width: calc(150px * 10); /* Adjust width based on images */
-  animation: scroll 15s linear infinite;
+  width: calc(150px * 10);
+  animation: scroll 25s linear infinite;
   background-color: #222222;
 }
 
 .slide {
-  width: 100px; /* Adjust based on image size */
+  width: 100px;
   padding: 10px;
 }
 
@@ -56,6 +56,18 @@ const tools = [
   width: 75%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+
 
 @keyframes scroll {
   0% { transform: translateX(0); }

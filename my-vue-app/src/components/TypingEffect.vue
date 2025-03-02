@@ -40,8 +40,8 @@ onMounted(() => {
 }
 
 h1 {
-  margin-right: 5px; /* Reduce right margin */
   display: inline-block; /* Ensure the bar stays close */
+  text-align: center;
 }
 
 @keyframes blink {

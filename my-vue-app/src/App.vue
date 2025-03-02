@@ -1,24 +1,27 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import ProjectPage from "@/components/ProjectPage.vue";
 import TechList from "@/components/TechList.vue";
+import FooterBar from "@/components/FooterBar.vue";
+import SideBar from './components/SideBar.vue';
 </script>
 
 <template>
+  <SideBar></SideBar>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="Hi! I am Michael." />
-<!--      <TypingEffect></TypingEffect>-->
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+
+      <div>
+        <HelloWorld msg="Hi! I am Michael." />
+      </div>
+
+
     </div>
-    <v-divider class="ma-16" inset :thickness="4" vertical></v-divider>
+    <v-divider class="ma-5" :thickness="4" vertical></v-divider>
+
     <TechList></TechList>
   </header>
-
+<!--    <FooterBar></FooterBar>-->
 <!--  <RouterView />-->
 </template>
 
@@ -26,8 +29,9 @@ import TechList from "@/components/TechList.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
-
 }
+
+
 
 .logo {
   display: block;
@@ -39,10 +43,8 @@ header {
 }
 
 nav {
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -63,6 +65,10 @@ nav a:first-of-type {
   border: 0;
 }
 
+.custom-icon-color .v-list-item__icon {
+    color: white;
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -76,8 +82,13 @@ nav a:first-of-type {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust space between divs */
+    align-items: center; /* Align content vertically */
+  }
+  .left, .right {
+    width: 50%; /* Each div takes up 50% of the width */
+    padding: 10px;
+    text-align: center;
   }
 
   nav {
