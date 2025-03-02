@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import TypingEffect from "@/components/TypingEffect.vue";
+import ProjectPage from "@/components/ProjectPage.vue";
+import TechList from "@/components/TechList.vue";
 </script>
 
 <template>
@@ -14,7 +15,8 @@ import TypingEffect from "@/components/TypingEffect.vue";
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
-    <v-divider :thickness="5" vertical></v-divider>
+    <v-divider class="ma-16" inset :thickness="4" vertical></v-divider>
+    <TechList></TechList>
   </header>
 
 <!--  <RouterView />-->
@@ -24,11 +26,16 @@ import TypingEffect from "@/components/TypingEffect.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
+
 }
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+.left_sec{
+  margin-left: 100px;
 }
 
 nav {

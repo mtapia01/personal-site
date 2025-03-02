@@ -33,6 +33,19 @@ onMounted(() => {
 .typing {
   font-size: 2rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white; /* Cursor effect */
+  animation: blink 0.7s infinite;
+}
+
+h1 {
+  margin-right: 5px; /* Reduce right margin */
+  display: inline-block; /* Ensure the bar stays close */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 </style>
