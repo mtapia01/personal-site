@@ -5,7 +5,7 @@ import TypingEffect from "@/components/TypingEffect.vue";
 </script>
 
 <template>
-  <v-card class="left">
+  <div class="main_homepage">
     <TypingEffect></TypingEffect>
     <h3>
       University of California Graduate
@@ -13,13 +13,20 @@ import TypingEffect from "@/components/TypingEffect.vue";
     <h3>
       Full Stack Developer
     </h3>
-    <v-divider class="ma-5" :thickness="4" vertical></v-divider>
-  </v-card>
-  <!--  <br>-->
-  <v-card class="right">
-    <v-btn to="/about">Click to Enter</v-btn>
-  </v-card>
+  </div>
+
+  <v-divider class="ma-5" :thickness="4" vertical></v-divider>
+  <br />
+  <v-btn class="home_btn" to="/about">Click to Enter</v-btn>
 </template>
 
 <style scoped>
+.main_homepage{
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 10%;
+}
+.home_btn {
+  background: #f9bc60;
+}
 </style>

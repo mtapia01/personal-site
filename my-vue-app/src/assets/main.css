@@ -1,35 +1,42 @@
-@import './base.css';
+html{
+  background: #004643;
+}
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  background: #004643;
+  font-family: Inter, system-ui;
+}
+h1, h2, h3, h4{
+  color: #fffffe;
+}
+#main{
+  color: #e8e4e6;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+#header_tag{
+  text-align: left !important;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+#left, #right {
+    width: 50%; /* Each div takes up 50% of the width */
+    padding: 10px;
+    text-align: center;
+}
+#main_homepage{
+  margin: 0;
 }
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
     place-items: center;
   }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .left, .right {
+    width: 50%; /* Each div takes up 50% of the width */
+    padding: 10px;
+    text-align: center;
   }
 }
