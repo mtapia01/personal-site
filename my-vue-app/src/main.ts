@@ -10,7 +10,6 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router"
-import HelloWorld from "@/components/HelloWorld.vue";
 import ProjectPage from "@/components/ProjectPage.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import HomePage from "@/components/HomePage.vue";

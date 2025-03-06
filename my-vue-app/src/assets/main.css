@@ -13,6 +13,9 @@ html{
 h1, h2, h3, h4{
   color: #fffffe;
 }
+p {
+  color: #e8e4e6;
+}
 #main{
   color: #e8e4e6;
 }
