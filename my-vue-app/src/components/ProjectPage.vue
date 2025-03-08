@@ -3,9 +3,12 @@ import ski_app from '../assets/images/ski-companion-app.mp4'
 import car_hud from '../assets/images/car_hud.png'
 import scheduler from '../assets/images/calendar-clock.png'
 import chromeDemo from '../assets/images/chrome-extension-demo.mp4'
+import {defineAsyncComponent} from "vue";
 
 
-import ProjectCard from "@/components/ProjectCard.vue";
+// import ProjectCard from "@/components/ProjectCard.vue";
+const ProjectCard = defineAsyncComponent(() => import('@/components/ProjectCard.vue'));
+
 
 const projects = [
   {

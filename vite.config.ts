@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'personal-site',
   plugins: [
     vue(),
     vueDevTools(),
@@ -15,4 +16,23 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-})
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // Chunk external libraries separately
+            if (id.includes('vue')) {
+              return 'vue';
+            }
+            if (id.includes('lodash')) {
+              return 'lodash';
+            }
+            return 'vendor'; // General vendor chunk
+          }
+          return null;
+        },
+      },
+    },
+  }
+});
