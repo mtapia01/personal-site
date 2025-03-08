@@ -1,7 +1,7 @@
-import './src/assets/main.css'
+import './assets/main.css'
 
 import { createApp } from 'vue'
-import App from './src/App.vue'
+import App from './App.vue'
 
 // Vuetify
 import 'vuetify/styles'
@@ -10,10 +10,10 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router"
-import ProjectPage from "src/components/ProjectPage.vue";
-import AboutMe from "src/components/AboutMe.vue";
-import HomePage from "src/components/HomePage.vue";
-import ContactPage from "src/components/ContactPage.vue"
+import ProjectPage from "@/components/ProjectPage.vue";
+import AboutMe from "@/components/AboutMe.vue";
+import HomePage from "@/components/HomePage.vue";
+import ContactPage from "@/components/ContactPage.vue"
 
 const app = createApp(App)
 
