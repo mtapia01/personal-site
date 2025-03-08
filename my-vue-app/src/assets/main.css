@@ -33,6 +33,12 @@ p {
   margin: 0;
 }
 
+#side-bar{
+    background-color: #abd1c6 !important;
+    z-index: 1000;
+    position: fixed
+  }
+
 @media (min-width: 1024px) {
   body {
     place-items: center;

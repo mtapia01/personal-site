@@ -13,6 +13,7 @@ import { createRouter, createWebHistory, createWebHashHistory } from "vue-router
 import ProjectPage from "@/components/ProjectPage.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import HomePage from "@/components/HomePage.vue";
+import ContactPage from "@/components/ContactPage.vue"
 
 const app = createApp(App)
 

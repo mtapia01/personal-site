@@ -17,7 +17,8 @@ import TypingEffect from "@/components/TypingEffect.vue";
 
   <v-divider class="ma-5" :thickness="4" vertical></v-divider>
   <br />
-  <v-btn class="home_btn" to="/about">Click to Enter</v-btn>
+  <v-btn class="home_btn" to="/about">Enter</v-btn>
+
 </template>
 
 <style scoped>

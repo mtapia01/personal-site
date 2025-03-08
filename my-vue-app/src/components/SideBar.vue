@@ -13,7 +13,7 @@
           <v-list-item style="color: #001e1d" prepend-icon="mdi-home" title="Home" to="/" class="custom-icon-color"></v-list-item>
           <v-list-item style="color: #001e1d" prepend-icon="mdi-account-box" title="About Me" to="/about" class="custom-icon-color"></v-list-item>
           <v-list-item style="color: #001e1d" prepend-icon="mdi-developer-board" title="Projects" to="/projects"></v-list-item>
-          <v-list-item style="color: #001e1d" prepend-icon="mdi-human-greeting-proximity" title="Contact" to="/contact"></v-list-item>
+<!--          <v-list-item style="color: #001e1d" prepend-icon="mdi-human-greeting-proximity" title="Contact" to="/contact"></v-list-item>-->
         </v-list>
       </v-navigation-drawer>
 
@@ -25,12 +25,11 @@
 </template>
 
 <style scoped>
-  #side-bar{
-    background-color: #abd1c6 !important;
 
-  }
   .v-navigation-drawer{
     background-color: #abd1c6 !important;
+    z-index: 1000;
+    position: fixed
   }
 
 
