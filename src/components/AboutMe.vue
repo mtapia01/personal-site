@@ -2,14 +2,13 @@
 import TechList from "@/components/TechList.vue";
 import snowboarding from '../assets/images/snowboarding.jpg'
 import concert from '../assets/images/concert.jpg'
-import cars from '../assets/images/cars.png'
 import travel from '../assets/images/travel.jpg';
 
   const images = [
     { src: snowboarding, caption: "Snowboarding Adventure 🏂" },
     { src: travel, caption: "Exploring the World ✈️" },
     { src: concert, caption: "Live Music 🎶" },
-    { src: cars, caption: "Love for Cars 🚗" },
+    { src: "https://res.cloudinary.com/dteqzqhbe/image/upload/v1752771568/cars_i3thpx.jpg", caption: "Love for Cars 🚗" },
   ];
 </script>
 
@@ -31,17 +30,17 @@ import travel from '../assets/images/travel.jpg';
   <div class="about_div">
     <p>These are the things I am into!</p>
     <v-carousel hide-delimiters>
-    <v-carousel-item v-for="(item, index) in images" :key="index" :src="item.src" cover>
-      <v-container class="fill-height d-flex align-end">
-        <v-row justify="center">
-          <v-col cols="12" class="text-center">
-            <v-sheet color="rgba(0, 0, 0, 0.6)" class="pa-2 rounded">
-              <span class="text-white">{{ item.caption }}</span>
-            </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-carousel-item>
+      <v-carousel-item v-for="(item, index) in images" :key="index" :src="item.src" cover eager>
+        <v-container class="fill-height d-flex align-end">
+          <v-row justify="center">
+            <v-col cols="12" class="text-center">
+              <v-sheet color="rgba(0, 0, 0, 0.6)" class="pa-2 rounded">
+                <span class="text-white">{{ item.caption }}</span>
+              </v-sheet>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-carousel-item>
   </v-carousel>
   </div>
 <!--  <v-row >-->

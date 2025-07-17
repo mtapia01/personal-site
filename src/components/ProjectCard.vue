@@ -1,15 +1,38 @@
 <script setup lang="ts">
+  import {onMounted} from "vue";
+
   const props = defineProps({
-    project_media: {type: String, default: ""},
+    project_media: {type: String, default: "placeholder.png"},
     project_desc: {type: String},
-    project_tools: {type: String},
+    project_tools: {type: String, default: ""},
     project_title: {type: String},
+    project_poster: {type: String},
   })
-  // const computed = {
   const optimizedMedia = () => {
-    return this.project_media.replace(/\.(png|jpg)$/, ".webp");
+    return props.project_media?.replace(/\.(png|jpg)$/, ".webp");
   }
-  // }
+
+
+
+  onMounted(() => {
+    const videos = document.querySelectorAll('video.project-video');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target as HTMLVideoElement;
+        for (const source of video.children) {
+          if (source.tagName === 'SOURCE') {
+            const srcEl = source as HTMLSourceElement;
+            const dataSrc = srcEl.dataset.src;
+            if (dataSrc) {
+              srcEl.src = dataSrc;
+            }
+          }
+        }
+      });
+    });
+    videos.forEach(video => observer.observe(video));
+  });
+
 </script>
 
 <template>
@@ -27,7 +50,7 @@
         class="project-image"
       ></v-img>
 
-      <video v-else controls class="project-video">
+      <video preload="none" v-else controls class="project-video" :poster="project_poster">
         <source height="250" width="400" :src="project_media" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

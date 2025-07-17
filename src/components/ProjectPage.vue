@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import ski_app from '../assets/images/ski-companion-app.mp4'
 import car_hud from '../assets/images/car_hud.png'
 import scheduler from '../assets/images/calendar-clock.png'
-import chromeDemo from '../assets/images/chrome-extension-demo.mp4'
+import discount_poster from '../assets/images/discount.jpg'
+import ski_poster from '../assets/images/ski.jpg'
 
 
 import ProjectCard from "@/components/ProjectCard.vue";
+const ski_app_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752771564/ski-companion-app_wkyo3h.mp4"
+const discount_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752772282/chrome-extension-demo_zyya4m_xt6kzv.mp4"
 
 const projects = [
   {
@@ -18,17 +20,19 @@ const projects = [
   },
   {
     title: 'Chrome Extension Discount Finder',
-    media: chromeDemo,
+    media: discount_video,
     link: '',
     tools: 'OpenAI API, JavaScript',
+    poster: discount_poster,
     project_desc:
       'Chrome extension that helps you search for both old and new discount codes. By utilizing the ChatGPT API, it finds recent codes for various online stores to help you save money while shopping.',
   },
   {
     title: 'Ski Resort Companion',
-    media: ski_app,
+    media: ski_app_video,
     link: '',
     tools: 'Remix Labs, Web Scraping',
+    poster: ski_poster,
     project_desc:
       'The Ski Resort Companion app provides live updates on road conditions for any state road, highway, or interstate. Using the CalTrans website, it allows users to see if there are any chain control, traffic, or road construction.',
   },
@@ -66,6 +70,7 @@ const projects = [
             :project_title="project.title"
             :project_desc="project.project_desc"
             :project_tools="project.tools"
+            :project_poster="project?.poster"
           />
         </v-col>
       </v-row>
