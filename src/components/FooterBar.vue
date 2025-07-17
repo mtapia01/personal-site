@@ -1,8 +1,9 @@
 <script setup lang="ts">
+  import { mdiLinkedin, mdiGithub, mdiEmail } from '@mdi/js'
   const icons = [
-    {icons: 'mdi-linkedin', links:"https://www.linkedin.com/in/michaeltapia01/"},
-    {icons: 'mdi-github', links: "https://github.com/mtapia01"},
-    {icons: 'mdi-email', links: "mailto:" + "michaeltapia80" + "@" + "yahoo.com" },
+    {icons: mdiLinkedin, links:"https://www.linkedin.com/in/michaeltapia01/"},
+    {icons: mdiGithub, links: "https://github.com/mtapia01"},
+    {icons: mdiEmail, links: "mailto:" + "michaeltapia80" + "@" + "yahoo.com" },
   ]
 </script>
 
@@ -16,21 +17,14 @@
         :thickness="2"
         class="border-opacity-100 footer_divide"
       ></v-divider>
-      <v-row>
-        <v-btn
-          v-for="(item, index) in icons"
-          :key="index"
-          :icon="item.icons"
-          :href="item.links"
-          target="_blank"
-          class="mx-4"
-          variant="text"
-        ></v-btn>
-      </v-row>
+      <div class="icon-links">
+        <a v-for="(icon, index) in icons" :key="index" :href="icon.links" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path :d="icon.icons" />
+          </svg>
+        </a>
+      </div>
 
-      <!--    <div class="pt-0">-->
-      <!--      Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.-->
-      <!--    </div>-->
 
       <v-divider></v-divider>
 
@@ -60,5 +54,20 @@
   padding: 10px; /* Add padding for better appearance */
   text-align: center; /* Center the content */
 }
+
+.icon {
+  width: 35px;
+  height: 35px;
+  fill: currentColor;
+  margin: 0 8px;
+}
+.icon-links a {
+  color: #001e1d;
+  transition: color 0.2s ease;
+}
+.icon-links a:hover {
+  color: #f9bc60;
+}
+
 
 </style>

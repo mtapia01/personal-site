@@ -19,8 +19,16 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        assetFileNames: (assetInfo) => {
+          if (/\.(ttf|eot)$/.test(assetInfo.name ?? '')) {
+            return 'ignored/[name][extname]'; // put them in a junk folder
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
         manualChunks(id) {
           if (id.includes('node_modules')) {
+            if (id.includes('vuetify')) return 'vuetify';
+            if (id.includes('material-design-icons')) return 'mdi';
             // Chunk external libraries separately
             if (id.includes('vue')) {
               return 'vue';
@@ -28,7 +36,7 @@ export default defineConfig({
             if (id.includes('lodash')) {
               return 'lodash';
             }
-            return 'vendor'; // General vendor chunk
+            return id.toString().split('node_modules/')[1].split('/')[0].toString(); // General vendor chunk
           }
           return null;
         },

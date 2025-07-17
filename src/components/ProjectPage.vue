@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import car_hud from '../assets/images/car_hud.png'
+import car_hud from '../assets/images/car_hud.jpg'
 import scheduler from '../assets/images/calendar-clock.png'
 import discount_poster from '../assets/images/discount.jpg'
 import ski_poster from '../assets/images/ski.jpg'
