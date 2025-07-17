@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+  import { mdiHome } from '@mdi/js'
+  import { mdiAccountBox } from '@mdi/js'
+  import { mdiDeveloperBoard } from '@mdi/js'
 </script>
 
 <template id="side-bar">
@@ -11,9 +13,9 @@
         permanent
       >
         <v-list density="compact" nav>
-          <v-list-item style="color: #001e1d" prepend-icon="mdi-home" title="Home" to="/" class="custom-icon-color"></v-list-item>
-          <v-list-item style="color: #001e1d" prepend-icon="mdi-account-box" title="About Me" to="/about" class="custom-icon-color"></v-list-item>
-          <v-list-item style="color: #001e1d" prepend-icon="mdi-developer-board" title="Projects" to="/projects"></v-list-item>
+          <v-list-item style="color: #001e1d" :prepend-icon="mdiHome" title="Home" to="/" class="custom-icon-color"></v-list-item>
+          <v-list-item style="color: #001e1d" :prepend-icon="mdiAccountBox" title="About Me" to="/about" class="custom-icon-color"></v-list-item>
+          <v-list-item style="color: #001e1d" :prepend-icon="mdiDeveloperBoard" title="Projects" to="/projects"></v-list-item>
 <!--          <v-list-item style="color: #001e1d" prepend-icon="mdi-human-greeting-proximity" title="Contact" to="/contact"></v-list-item>-->
         </v-list>
       </v-navigation-drawer>

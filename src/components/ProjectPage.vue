@@ -7,7 +7,7 @@ import ski_poster from '../assets/images/ski.jpg'
 
 import ProjectCard from "@/components/ProjectCard.vue";
 const ski_app_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752771564/ski-companion-app_wkyo3h.mp4"
-const discount_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752772282/chrome-extension-demo_zyya4m_xt6kzv.mp4"
+const discount_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752772282/chrome-extension-demo_zyya4m_xt6kzv.mp4" // cloudinary
 
 const projects = [
   {

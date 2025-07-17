@@ -5,7 +5,8 @@ import App from './App.vue'
 
 // Vuetify
 import 'vuetify/styles'
-import '@mdi/font/css/materialdesignicons.min.css';
+// import '@mdi/font/css/materialdesignicons.min.css';
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
@@ -13,12 +14,18 @@ import { createRouter, createWebHashHistory } from "vue-router"
 import ProjectPage from "@/components/ProjectPage.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import HomePage from "@/components/HomePage.vue";
-import VueLazyload from 'vue-lazyload';
 const app = createApp(App)
 
 const vuetify = createVuetify({
   components,
   directives,
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: {
+      mdi,
+    },
+  },
 })
 
 const routes = [
@@ -44,7 +51,6 @@ const router = createRouter({
   routes, // short for `routes: routes`
 });
 
-app.use(VueLazyload);
 app.use(router)
 app.use(vuetify).mount('#app')
 

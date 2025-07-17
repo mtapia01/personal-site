@@ -11,11 +11,9 @@
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --add"
   },
   "dependencies": {
-    "@mdi/font": "^7.4.47",
-    "@mdi/js": "^7.4.47",
     "@mui/icons-material": "^6.4.7",
     "vue": "^3.5.13",
     "vue-lazyload": "^3.0.0",
@@ -24,6 +22,7 @@
     "vuetify": "^3.7.14"
   },
   "devDependencies": {
+    "@mdi/js": "^7.4.47",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.7",
     "@vitejs/plugin-vue": "^5.2.1",
