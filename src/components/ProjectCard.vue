@@ -1,20 +1,26 @@
 <script setup lang="ts">
   const props = defineProps({
-    project_media: {type: String},
+    project_media: {type: String, default: ""},
     project_desc: {type: String},
     project_tools: {type: String},
     project_title: {type: String},
   })
+  // const computed = {
+  const optimizedMedia = () => {
+    return this.project_media.replace(/\.(png|jpg)$/, ".webp");
+  }
+  // }
 </script>
 
 <template>
-  <v-card class="mx-auto my-4 proj_card" max-width="480" height="580" elevation="4">
+  <v-card class="mx-auto my-4 proj_card" max-width="480" height="580" elevation="2">
     <!-- Project Media (Image or Video) -->
     <div class="media-container">
       <h3>{{ project_title }}</h3>
       <v-img
         v-if="!project_media.endsWith('.mp4')"
         :src="project_media"
+        :lazy-src="'@/assets/placeholder.png'"
         height="250"
         width="400"
         contain
@@ -22,7 +28,7 @@
       ></v-img>
 
       <video v-else controls class="project-video">
-        <source :src="project_media" type="video/mp4" />
+        <source height="250" width="400" :src="project_media" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

@@ -57,7 +57,7 @@ const projects = [
         <v-col
           v-for="(project, index) in projects"
           :key="index"
-          cols="12"
+          cols="2"
           sm="6"
           md="4"
         >

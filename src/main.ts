@@ -14,7 +14,7 @@ import ProjectPage from "@/components/ProjectPage.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import HomePage from "@/components/HomePage.vue";
 import ContactPage from "@/components/ContactPage.vue"
-
+import VueLazyload from 'vue-lazyload';
 const app = createApp(App)
 
 const vuetify = createVuetify({
@@ -45,7 +45,7 @@ const router = createRouter({
   routes, // short for `routes: routes`
 });
 
-
+app.use(VueLazyload);
 app.use(router)
 app.use(vuetify).mount('#app')
 

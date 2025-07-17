@@ -5,12 +5,12 @@ import concert from '../assets/images/concert.jpg'
 import cars from '../assets/images/cars.png'
 import travel from '../assets/images/travel.jpg';
 
-const images = [
-  { src: snowboarding, caption: "Snowboarding Adventure 🏂" },
-  { src: travel, caption: "Exploring the World ✈️" },
-  { src: concert, caption: "Live Music 🎶" },
-  { src: cars, caption: "Love for Cars 🚗" },
-];
+  const images = [
+    { src: snowboarding, caption: "Snowboarding Adventure 🏂" },
+    { src: travel, caption: "Exploring the World ✈️" },
+    { src: concert, caption: "Live Music 🎶" },
+    { src: cars, caption: "Love for Cars 🚗" },
+  ];
 </script>
 
 <template>
@@ -49,8 +49,9 @@ const images = [
     <TechList></TechList>
     <h3>See my other projects here</h3>
 <!--  </v-row>-->
-
-  <v-btn class="proj_btn" to="/projects">Projects</v-btn>
+  <div style="align-content: center">
+    <v-btn class="proj_btn" to="/projects">Projects</v-btn>
+  </div>
 </template>
 
 <style scoped>

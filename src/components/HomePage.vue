@@ -15,9 +15,11 @@ import TypingEffect from "@/components/TypingEffect.vue";
     </h3>
   </div>
 
-  <v-divider class="ma-5" :thickness="4" vertical></v-divider>
-  <br />
-  <v-btn class="home_btn" to="/about">Enter</v-btn>
+  <div>
+    <v-divider class="ma-5" :thickness="4" vertical></v-divider>
+    <br />
+    <v-btn class="home_btn" to="/about">Enter</v-btn>
+  </div>
 
 </template>
 
@@ -29,5 +31,6 @@ import TypingEffect from "@/components/TypingEffect.vue";
 }
 .home_btn {
   background: #f9bc60;
+  align-content: center;
 }
 </style>

@@ -8,6 +8,7 @@
       <v-navigation-drawer
         expand-on-hover
         rail
+        permanent
       >
         <v-list density="compact" nav>
           <v-list-item style="color: #001e1d" prepend-icon="mdi-home" title="Home" to="/" class="custom-icon-color"></v-list-item>
