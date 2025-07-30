@@ -3,6 +3,7 @@ import car_hud from '../assets/images/car_hud.jpg'
 import scheduler from '../assets/images/calendar-clock.png'
 import discount_poster from '../assets/images/discount.jpg'
 import ski_poster from '../assets/images/ski.jpg'
+import auto_loan from '../assets/images/auto-loan-calc.webp'
 
 
 import ProjectCard from "@/components/ProjectCard.vue";
@@ -11,6 +12,14 @@ const discount_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v17527
 
 const projects = [
   {
+    title: 'Auto Loan Calculator',
+    media: auto_loan,
+    tools: 'TypeScript, Expo.js, React Native',
+    project_desc:
+      'Created a visualizer to help you better understand the cost of an auto loan. Enter price, loan information, and zip code to get a detailed view of the Out the Door price. You will then see a breakdown of the loan via a table with the option to input extra payments for one or all the months.',
+    link: "https://auto-loan-calculator--437arbi74u.expo.app/",
+  },
+  {
     title: 'Car Heads-Up Display',
     media: car_hud,
     link: '',
@@ -18,8 +27,9 @@ const projects = [
     project_desc:
       'Developed a Car Heads-Up Display (HUD) that detects and interprets gauge readings. The system calibrates the speedometer, tachometer, and fuel gauge, using image processing and trigonometric calculations to convert needle angles into real-time speed and RPM values.',
   },
+
   {
-    title: 'Chrome Extension Discount Finder',
+    title: 'Chrome Discount Finder',
     media: discount_video,
     link: '',
     tools: 'OpenAI API, JavaScript',
@@ -43,6 +53,7 @@ const projects = [
     project_desc:
       'Developed a Bio Secure Scheduler for Agrecom, a water treatment, sanitation, and pest control company. The scheduler optimizes job assignments while ensuring compliance with strict quarantine restrictions, automating a previously manual and time-consuming process.',
   },
+
 ];
 </script>
 
@@ -71,6 +82,7 @@ const projects = [
             :project_desc="project.project_desc"
             :project_tools="project.tools"
             :project_poster="project?.poster"
+            :project_link="project?.link"
           />
         </v-col>
       </v-row>

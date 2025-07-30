@@ -7,11 +7,15 @@
     project_tools: {type: String, default: ""},
     project_title: {type: String},
     project_poster: {type: String},
+    project_link: {type: String},
   })
   const optimizedMedia = () => {
     return props.project_media?.replace(/\.(png|jpg)$/, ".webp");
   }
 
+  const open_link = () => {
+    window.open(props.project_link, '_blank');
+  };
 
 
   onMounted(() => {
@@ -36,7 +40,7 @@
 </script>
 
 <template>
-  <v-card class="mx-auto my-4 proj_card" max-width="480" height="580" elevation="2">
+  <v-card class="mx-auto my-4 proj_card" max-width="480" height="600" elevation="2">
     <!-- Project Media (Image or Video) -->
     <div class="media-container">
       <h3>{{ project_title }}</h3>
@@ -58,24 +62,37 @@
 
     <v-card-text class="text-center">
       <!-- Project Title -->
-      <h3 class="text-h5 font-weight-bold mb-2">{{ project_title }}</h3>
+      <div style="flex: 0 0 15%;">
+        <h3 class="text-h5 font-weight-bold mb-2">{{ project_title }}</h3>
+      </div>
 
       <!-- Project Description -->
-      <p class="text-body-2 text-grey-darken-2 proj_desc">{{ project_desc }}</p>
+      <div style="flex: 0 0 35%; overflow-y: auto; height: 100px">
+        <p class="text-body-2 text-grey-darken-2 proj_desc">{{ project_desc }}</p>
+      </div>
+      <br/>
 
       <!-- Project Tools -->
-      <v-chip-group class="mt-2 tool_chips">
-        <v-chip
-          v-for="(tool, index) in project_tools.split(',')"
-          :key="index"
-          variant="elevated"
-          class="ma-1"
-          color="yellow"
-          label
-        >
-          {{ tool.trim() }}
-        </v-chip>
-      </v-chip-group>
+      <div style="flex: 1;" class="d-flex flex-column align-center justify-center">
+
+        <v-btn class="mb-3" v-if="project_link" @click="open_link(project_link)" >Link to App</v-btn>
+
+        <v-chip-group class="mt-2 tool_chips">
+          <div class="d-flex flex-wrap justify-center">
+            <v-chip
+                v-for="(tool, index) in project_tools.split(',')"
+                :key="index"
+                variant="elevated"
+                class="ma-1"
+                color="yellow"
+                label
+            >
+              {{ tool.trim() }}
+            </v-chip>
+          </div>
+        </v-chip-group>
+
+      </div>
     </v-card-text>
   </v-card>
 </template>
@@ -112,6 +129,9 @@ h3{
   width: 100%;
   padding: 10px;
   color: #f9bc60;
+}
+.v-btn{
+  background: #f9bc60;
 }
 
 .v-chip--variant-elevated{
