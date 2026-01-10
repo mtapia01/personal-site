@@ -9,8 +9,17 @@ import auto_loan from '../assets/images/auto-loan-calc.webp'
 import ProjectCard from "@/components/ProjectCard.vue";
 const ski_app_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752771564/ski-companion-app_wkyo3h.mp4"
 const discount_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1752772282/chrome-extension-demo_zyya4m_xt6kzv.mp4" // cloudinary
+const digital_closet_video = "https://res.cloudinary.com/dteqzqhbe/video/upload/v1762210241/Screen_Recording_2025-11-03_at_2.21.40_PM_ypvurl.mp4" // cloudinary
 
 const projects = [
+  {
+    title: 'Digital Closet [DEMO]',
+    media: digital_closet_video,
+    tools: 'React Native, TypeScript, Supabase, PostgreSQL',
+    project_desc:
+      'Digital Closet is a work-in-progress full-stack mobile and web application that allows users to upload and organize images of their clothing into a digital wardrobe.\n' +
+        'Built using React Native (Expo) for a responsive, cross-platform experience, the app integrates with Supabase for secure authentication, data storage, and image management.',
+  },
   {
     title: 'Auto Loan Calculator',
     media: auto_loan,
@@ -53,6 +62,7 @@ const projects = [
     project_desc:
       'Developed a Bio Secure Scheduler for Agrecom, a water treatment, sanitation, and pest control company. The scheduler optimizes job assignments while ensuring compliance with strict quarantine restrictions, automating a previously manual and time-consuming process.',
   },
+
 
 ];
 </script>

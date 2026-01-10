@@ -17,16 +17,16 @@ import travel from '../assets/images/travel.jpg';
     <h1>About Me</h1>
   </div>
   <v-row justify="start">
-    <h2>Who am I?</h2>
+    <h1>Who am I?</h1>
     <div class="about_div">
-      Originally from the Central Valley, I came to UC Merced in 2020 and graduated May 2024 with a degree in <span class="degree_underline">Computer Science
-    and Engineering</span>. I became very passionate about web development my first year where I had to develop and maintain a website.
-      It was here I learned the fundamentals of programming and became invested in improving my skill-set.
+      I came to UC Merced in August 2020 and graduated in May 2024 with a degree in <span class="degree_underline">Computer Science and Engineering</span>.
+      Early on, I gained hands-on experience by building and maintaining a production website, where I developed a strong foundation in web development and discovered an interest in working across the stack.
+      Today, I work as a Full Stack Engineer developing data-driven web applications, with a focus on performance, usability, and reliable production deployments.
     </div>
     <br />
   </v-row>
 
-  <h2>Hobbies</h2>
+<!--  <h2>Hobbies</h2>-->
   <div class="about_div">
     <p>These are the things I am into!</p>
     <v-carousel hide-delimiters>
@@ -43,11 +43,9 @@ import travel from '../assets/images/travel.jpg';
       </v-carousel-item>
   </v-carousel>
   </div>
-<!--  <v-row >-->
-    <h2>Here are the tools I like using!</h2>
+    <h2>Here are some of the tools I like using:</h2>
     <TechList></TechList>
     <h3>See my other projects here</h3>
-<!--  </v-row>-->
   <div style="align-content: center">
     <v-btn class="proj_btn" to="/projects">Projects</v-btn>
   </div>
@@ -59,7 +57,7 @@ import travel from '../assets/images/travel.jpg';
     font-size: 22px;
     color: #e8e4e6;
     padding-bottom: 15px;
-    text-align: center;
+    text-align: left;
   }
   .header_tag{
     padding-bottom: 10px;

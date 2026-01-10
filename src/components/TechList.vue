@@ -36,7 +36,7 @@ const tools = [
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  width: 40%;
+  width: 70%;
   padding: 10px 0;
   border-radius: 50px;
 }

@@ -67,7 +67,7 @@
       </div>
 
       <!-- Project Description -->
-      <div style="flex: 0 0 35%; overflow-y: auto; height: 100px">
+      <div style="flex: 0 0 35%; overflow-y: scroll; height: 100px">
         <p class="text-body-2 text-grey-darken-2 proj_desc">{{ project_desc }}</p>
       </div>
       <br/>
@@ -75,7 +75,7 @@
       <!-- Project Tools -->
       <div style="flex: 1;" class="d-flex flex-column align-center justify-center">
 
-        <v-btn class="mb-3" v-if="project_link" @click="open_link(project_link)" >Link to App</v-btn>
+        <v-btn class="mb-3" v-if="project_link" @click="open_link()" >Link to App</v-btn>
 
         <v-chip-group class="mt-2 tool_chips">
           <div class="d-flex flex-wrap justify-center">
